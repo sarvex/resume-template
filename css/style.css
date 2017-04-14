@@ -20,6 +20,10 @@ h2 {
   font-weight: 300;
   padding: 10px 0 20px; }
 
+h3, h4 {
+  color: #028cd5;
+  font-weight: 400; }
+
 a, abbr[title] {
   text-decoration: none; }
 
@@ -27,10 +31,41 @@ ul {
   padding-left: 0; }
 
 .container {
+  display: table;
   margin: 0 auto;
   max-width: 980px;
   position: relative;
   width: 80%; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.row {
+  margin-left: -5%;
+  margin-right: -5%; }
+
+.col {
+  display: table-cell;
+  float: left;
+  padding: 30px 5%;
+  position: relative; }
+
+.col section {
+  border-bottom: 2px solid #e0e0e0; }
+
+.col-small {
+  background: #fff;
+  -webkit-box-shadow: 8px 0 5px 0 #999;
+  -moz-box-shadow: 8px 0 5px 0 #999;
+  box-shadow: 8px 0 5px 0 #999;
+  width: 20%;
+  z-index: 2; }
+
+.col-large {
+  background: #eee;
+  width: 60%;
+  z-index: 1; }
 
 .navbar ul {
   list-style: none;
@@ -66,12 +101,14 @@ header {
   box-shadow: 0 10px 10px 0 #bbb;
   color: #fff;
   background: #0aa6e1;
-  padding: 20px 0; }
+  padding: 20px 0;
+  position: relative;
+  z-index: 100; }
 
 header img {
   width: 120px; }
 
-.img-right {
+.align-right {
   bottom: 0;
   margin: auto;
   position: absolute;
