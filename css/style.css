@@ -1,3 +1,37 @@
 @import url(normalize.css);
+/**********************************
+    Layout
+ **********************************/
+body {
+  margin: 0; }
+
+a, abbr[title] {
+  text-decoration: none; }
+
+ul {
+  padding-left: 0; }
+
+.container {
+  margin: 0 auto;
+  max-width: 980px;
+  width: 80%; }
+
+.navbar ul {
+  list-style: none;
+  margin: 0; }
+  .navbar ul li {
+    display: inline-block; }
+
+/**********************************
+    Navigation bar
+ **********************************/
+.navbar {
+  background: #028cd5; }
+  .navbar a {
+    display: block;
+    height: 60px;
+    padding: 0 10px; }
+  .navbar ul {
+    line-height: 60px; }
 
 /*# sourceMappingURL=style.css.map */

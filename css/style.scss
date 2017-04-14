@@ -1,1 +1,52 @@
 @import "normalize.css";
+@import "variables";
+
+/**********************************
+    Layout
+ **********************************/
+
+ body {
+     margin: 0;
+ }
+
+ a, abbr[title] {
+     text-decoration: none;
+ }
+
+ ul {
+     padding-left: 0;
+ }
+
+.container {
+    margin: 0 auto;
+    max-width: 980px;
+    width: 80%;
+}
+
+%list {
+    list-style: none;
+    margin: 0;
+
+    li {
+        display: inline-block;
+    }
+}
+
+/**********************************
+    Navigation bar
+ **********************************/
+
+ .navbar {
+     background: $color-primary;
+
+     a {
+         display: block;
+         height: 60px;
+         padding: 0 10px;
+     }
+
+     ul {
+         @extend %list;
+         line-height: 60px;
+     }
+ }
