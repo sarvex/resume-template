@@ -3,7 +3,22 @@
     Layout
  **********************************/
 body {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
   margin: 0; }
+
+h1, h2 {
+  margin: 0; }
+
+h1 {
+  font-size: 2.3em;
+  font-weight: 400;
+  padding-top: 40px; }
+
+h2 {
+  font-weight: 300;
+  padding: 10px 0 20px; }
 
 a, abbr[title] {
   text-decoration: none; }
@@ -14,6 +29,7 @@ ul {
 .container {
   margin: 0 auto;
   max-width: 980px;
+  position: relative;
   width: 80%; }
 
 .navbar ul {
@@ -24,14 +40,45 @@ ul {
 
 /**********************************
     Navigation bar
- **********************************/
+***********************************/
 .navbar {
   background: #028cd5; }
   .navbar a {
+    color: #aad3f3;
     display: block;
     height: 60px;
     padding: 0 10px; }
   .navbar ul {
     line-height: 60px; }
+
+.active, a.active {
+  border-bottom: 2px solid #fff; }
+
+a.active {
+  color: #fff; }
+
+/**********************************
+    Header
+***********************************/
+header {
+  -webkit-box-shadow: 0 10px 10px 0 #bbb;
+  -moz-box-shadow: 0 10px 10px 0 #bbb;
+  box-shadow: 0 10px 10px 0 #bbb;
+  color: #fff;
+  background: #0aa6e1;
+  padding: 20px 0; }
+
+header img {
+  width: 120px; }
+
+.img-right {
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.rounded {
+  border-radius: 50%; }
 
 /*# sourceMappingURL=style.css.map */

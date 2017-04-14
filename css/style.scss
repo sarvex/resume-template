@@ -6,7 +6,29 @@
  **********************************/
 
  body {
+     font: {
+         size: 16px;
+         family: "Open Sans", sans-serif;
+         weight: 400;
+     }
      margin: 0;
+ }
+
+ h1, h2 {
+     margin: 0;
+ }
+
+ h1 {
+     font: {
+         size: 2.3em;
+         weight: 400;
+     }
+     padding-top: 40px;
+ }
+
+ h2 {
+     font-weight: 300;
+     padding: 10px 0 20px;
  }
 
  a, abbr[title] {
@@ -20,6 +42,7 @@
 .container {
     margin: 0 auto;
     max-width: 980px;
+    position: relative;
     width: 80%;
 }
 
@@ -34,19 +57,58 @@
 
 /**********************************
     Navigation bar
- **********************************/
+***********************************/
 
- .navbar {
-     background: $color-primary;
+.navbar {
+    background: $color-primary;
 
-     a {
-         display: block;
-         height: 60px;
-         padding: 0 10px;
-     }
+    a {
+        color: $color-text-secondary;
+        display: block;
+        height: 60px;
+        padding: 0 10px;
+    }
 
-     ul {
-         @extend %list;
-         line-height: 60px;
-     }
- }
+    ul {
+        @extend %list;
+        line-height: 60px;
+    }
+}
+
+.active {
+    border-bottom: 2px solid $white;
+}
+
+a.active {
+    @extend .active;
+    color: $color-text-primary;
+}
+
+/**********************************
+    Header
+***********************************/
+
+header {
+    -webkit-box-shadow: 0 10px 10px 0 #bbb;
+       -moz-box-shadow: 0 10px 10px 0 #bbb;
+            box-shadow: 0 10px 10px 0 #bbb;
+    color: $color-text-primary;
+    background: $color-primary-light;
+    padding: 20px 0;
+}
+
+header img {
+    width: 120px;
+}
+
+.img-right {
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.rounded {
+    border-radius: 50%;
+}
