@@ -8,6 +8,9 @@ body {
   font-weight: 400;
   margin: 0; }
 
+p {
+  line-height: 1.5; }
+
 h1, h2 {
   margin: 0; }
 
@@ -31,8 +34,8 @@ ul {
   padding-left: 0; }
 
 .container {
-  display: table;
   margin: 0 auto;
+  overflow: hidden;
   position: relative;
   width: 80%; }
   .container:after {
@@ -45,25 +48,28 @@ ul {
 
 .col {
   box-sizing: border-box;
-  display: table-cell;
   float: left;
   padding: 30px 5%;
-  position: relative; }
+  position: relative;
+  /* Make all columns equal height.
+  https://css-tricks.com/fluid-width-equal-height-columns/ */
+  margin-bottom: -99999px;
+  padding-bottom: 99999px; }
 
 .col section {
   border-bottom: 2px solid #e0e0e0; }
 
 .col-small {
   background: #fff;
-  -webkit-box-shadow: 8px 0 5px 0 #999;
-  -moz-box-shadow: 8px 0 5px 0 #999;
-  box-shadow: 8px 0 5px 0 #999;
-  width: 30%;
+  -webkit-box-shadow: 5px 0 10px -1px #999;
+  -moz-box-shadow: 5px 0 10px -1px #999;
+  box-shadow: 5px 0 10px -1px #999;
+  width: 35%;
   z-index: 2; }
 
 .col-large {
   background: #eee;
-  width: 70%;
+  width: 65%;
   z-index: 1; }
 
 .offset-left {
@@ -87,7 +93,8 @@ ul {
     color: #aad3f3;
     display: block;
     height: 60px;
-    padding: 0 10px; }
+    padding: 0 10px;
+    text-transform: uppercase; }
   .navbar ul {
     line-height: 60px; }
 
@@ -101,24 +108,18 @@ a.active {
     Header
 ***********************************/
 header {
-  -webkit-box-shadow: 0 10px 10px 0 #bbb;
-  -moz-box-shadow: 0 10px 10px 0 #bbb;
-  box-shadow: 0 10px 10px 0 #bbb;
+  -webkit-box-shadow: 0 10px 12px 0 #c0c0c0;
+  -moz-box-shadow: 0 10px 12px 0 #c0c0c0;
+  box-shadow: 0 10px 12px 0 #c0c0c0;
   color: #fff;
   background: #0aa6e1;
-  padding: 20px 0;
+  padding: 30px 0;
   position: relative;
   z-index: 100; }
 
 header img {
-  width: 120px; }
-
-.align-right {
-  bottom: 0;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  top: 0; }
+  float: right;
+  width: 150px; }
 
 .rounded {
   border-radius: 50%; }

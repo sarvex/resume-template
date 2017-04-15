@@ -14,6 +14,10 @@
      margin: 0;
  }
 
+ p {
+     line-height: 1.5;
+ }
+
  h1, h2 {
      margin: 0;
  }
@@ -47,8 +51,8 @@ h3, h4 {
  }
 
 .container {
-    display: table;
     margin: 0 auto;
+    overflow: hidden;
     position: relative;
     width: 80%;
     &:after {
@@ -74,10 +78,13 @@ h3, h4 {
 
 .col {
     box-sizing: border-box;
-    display: table-cell;
     float: left;
     padding: 30px 5%;
     position: relative;
+    /* Make all columns equal height.
+    https://css-tricks.com/fluid-width-equal-height-columns/ */
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
 }
 
 // TEMPORARY - will refactor
@@ -87,16 +94,16 @@ h3, h4 {
 
 .col-small {
     background: $white;
-    -webkit-box-shadow: 8px 0 5px 0 #999;
-       -moz-box-shadow: 8px 0 5px 0 #999;
-            box-shadow: 8px 0 5px 0 #999;
-    width: 30%;
+    -webkit-box-shadow: 5px 0 10px -1px #999;
+       -moz-box-shadow: 5px 0 10px -1px #999;
+            box-shadow: 5px 0 10px -1px #999;
+    width: 35%;
     z-index: 2;
 }
 
 .col-large {
     background: $color-secondary-light;
-    width: 70%;
+    width: 65%;
     z-index: 1;
 }
 
@@ -129,6 +136,7 @@ h3, h4 {
         display: block;
         height: 60px;
         padding: 0 10px;
+        text-transform: uppercase;
     }
 
     ul {
@@ -151,26 +159,19 @@ a.active {
 ***********************************/
 
 header {
-    -webkit-box-shadow: 0 10px 10px 0 #bbb;
-       -moz-box-shadow: 0 10px 10px 0 #bbb;
-            box-shadow: 0 10px 10px 0 #bbb;
+    -webkit-box-shadow: 0 10px 12px 0 #c0c0c0;
+       -moz-box-shadow: 0 10px 12px 0 #c0c0c0;
+            box-shadow: 0 10px 12px 0 #c0c0c0;
     color: $color-text-primary;
     background: $color-primary-light;
-    padding: 20px 0;
+    padding: 30px 0;
     position: relative;
     z-index: 100;
 }
 
 header img {
-    width: 120px;
-}
-
-.align-right {
-    bottom: 0;
-    margin: auto;
-    position: absolute;
-    right: 0;
-    top: 0;
+    float: right;
+    width: 150px;
 }
 
 .rounded {
