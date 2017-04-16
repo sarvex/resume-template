@@ -3,9 +3,11 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <title>Resume Template - Portfolio</title>
     </head>
+
     <body>
 
         <nav class="navbar" role="navigation">
@@ -13,15 +15,17 @@
                 <ul>
                     <li><a href="index.html">Hello</a></li>
                     <li><a href="resume.html">Resume</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a class="active" href="portfolio.html">Portfolio</a></li>
                 </ul>
             </div>
         </nav>
 
-        <header class="container" role="banner">
-            <img class="rounded" src="http://style.anu.edu.au/_anu/4/images/placeholders/person.png" alt="Awesome Guy's portrait">
-            <h1>Awesome Guy</h1>
-            <h2>Designer</h2>
+        <header role="banner">
+            <div class="container">
+                <img class="rounded" src="http://style.anu.edu.au/_anu/4/images/placeholders/person.png" alt="Awesome Guy's portrait">
+                <h1>Awesome Guy</h1>
+                <h2>Designer</h2>
+            </div>
         </header>
 
         <main class="container">
@@ -67,37 +71,43 @@
 
         </main>
 
-        <footer class="container" role="contentinfo">
+        <footer role="contentinfo">
 
-            <div class="">
-                <a href="#">
-                    <div class="">
-                        <i class="fa fa-facebook"></i>
-                    </div>
-                    www.facebook.com/awesomeguy
-                </a>
-                <a href="#">
-                    <div class="">
-                        <i class="fa fa-linkedin"></i>
-                    </div>
-                    www.linkedin.com/awesomeguy
-                </a>
-                <a href="#">
-                    <div class="">
-                        <i class="fa fa-twitter"></i>
-                    </div>
-                    www.twitter.com/awesomeguy
-                </a>
+            <div class="top-footer">
+                <div class="container">
+                    <ul class="social-links">
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                                <span>www.facebook.com/awesomeguy</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-linkedin"></i>
+                                <span>www.linkedin.com/awesomeguy</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                                <span>www.twitter.com/awesomeguy</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="">
-                <!-- fake address generated using this website:
-                http://www.fakeaddressgenerator.com/World/us_address_generator -->
-                <address>
-                    3347 Farland Street, Chicago, <abbr title="Illinois">IL</abbr> 60618.
-                </address>
-                Call: 111-222-3333. Email: awesomeguy@gmail.com.
-                <a href="#">www.awesomeguy.com</a>
+            <div class="bottom-footer">
+                <div class="container">
+                    <!-- fake address generated using this website:
+                    http://www.fakeaddressgenerator.com/World/us_address_generator -->
+                    <address>
+                        3347 Farland Street, Chicago, <abbr title="Illinois">IL</abbr> 60618.
+                    </address>
+                    Call: 111-222-3333. Email: awesomeguy@gmail.com.
+                    <a href="#"><span>www.awesomeguy.com</span></a>
+                </div>
             </div>
 
         </footer>
