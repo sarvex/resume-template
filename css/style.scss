@@ -78,12 +78,12 @@ table th, td {
     padding: 10px 0;
 }
 
-progress {
+table progress {
     -webkit-appearance: none;
             appearance: none;
     background: $color-divider;
     border: none;
-    color: $color-primary-light;
+    color: $color-primary;
     height: 12px;
     width: 100%;
 
@@ -92,11 +92,11 @@ progress {
     }
 
     &::-webkit-progress-value {
-        background: $color-primary-light;
+        background: $color-primary;
     }
 
     &::-moz-progress-bar {
-        background: $color-primary-light;
+        background: $color-primary;
     }
 }
 
@@ -129,25 +129,17 @@ progress {
     /* make all columns equal height.
     https://css-tricks.com/fluid-width-equal-height-columns/ */
     margin-bottom: -99999px;
-    padding-bottom: 99999px;
+    padding-bottom: 99996px;
 
     section {
         padding-bottom: 20px;
-
-        p {
-            margin: 0;
-        }
     }
 
     &-small {
         background: $white;
-        box-shadow: 5px 0 10px -1px #999;
+        box-shadow: 5px 0 10px -1px rgba(0, 0, 0, 0.6);
         width: 35%;
         z-index: 2;
-
-        p {
-            margin: 0;
-        }
     }
 
     &-large {
@@ -240,6 +232,24 @@ progress {
         color: $color-text-primary;
         margin-bottom: 5px;
     }
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.portfolio-img {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+
+    img {
+        width: 100%;
+    }
+}
+
+.project-link {
+    color: $color-primary;
 }
 
 %list {

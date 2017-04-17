@@ -55,20 +55,20 @@ table th {
 table th, td {
   padding: 10px 0; }
 
-progress {
+table progress {
   -webkit-appearance: none;
   appearance: none;
   background: #d8d8d8;
   border: none;
-  color: #0aa6e1;
+  color: #028cd5;
   height: 12px;
   width: 100%; }
-  progress::-webkit-progress-bar {
+  table progress::-webkit-progress-bar {
     background: #d8d8d8; }
-  progress::-webkit-progress-value {
-    background: #0aa6e1; }
-  progress::-moz-progress-bar {
-    background: #0aa6e1; }
+  table progress::-webkit-progress-value {
+    background: #028cd5; }
+  table progress::-moz-progress-bar {
+    background: #028cd5; }
 
 .container:after, .hobbies:after, .navbar ul:after, .social-links:after, .bottom-footer:after {
   clear: both;
@@ -92,18 +92,14 @@ progress {
   /* make all columns equal height.
   https://css-tricks.com/fluid-width-equal-height-columns/ */
   margin-bottom: -99999px;
-  padding-bottom: 99999px; }
+  padding-bottom: 99996px; }
   .col section {
     padding-bottom: 20px; }
-    .col section p {
-      margin: 0; }
   .col-small {
     background: #fff;
-    box-shadow: 5px 0 10px -1px #999;
+    box-shadow: 5px 0 10px -1px rgba(0, 0, 0, 0.6);
     width: 35%;
     z-index: 2; }
-    .col-small p {
-      margin: 0; }
   .col-large {
     background: #eee;
     width: 65%;
@@ -164,6 +160,19 @@ progress {
   background: #a6d3f2;
   color: #fff;
   margin-bottom: 5px; }
+
+.no-padding {
+  padding: 0; }
+
+.portfolio-img {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0; }
+  .portfolio-img img {
+    width: 100%; }
+
+.project-link {
+  color: #028cd5; }
 
 .hobbies, .navbar ul, .social-links {
   list-style: none;
