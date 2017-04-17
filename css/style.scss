@@ -78,9 +78,26 @@ table th, td {
     padding: 10px 0;
 }
 
-table progress {
+progress {
+    -webkit-appearance: none;
+            appearance: none;
+    background: $color-divider;
+    border: none;
+    color: $color-primary-light;
     height: 12px;
     width: 100%;
+
+    &::-webkit-progress-bar {
+        background: $color-divider;
+    }
+
+    &::-webkit-progress-value {
+        background: $color-primary-light;
+    }
+
+    &::-moz-progress-bar {
+        background: $color-primary-light;
+    }
 }
 
 %clearfix {
@@ -194,6 +211,37 @@ table progress {
     }
 }
 
+.year {
+    float: right;
+}
+
+.rounded-icons {
+    i {
+        border-radius: 50%;
+        display: block;
+        font-size: 2.1em;
+        line-height: 2.1em;
+        margin: 0 auto 20px;
+        text-align: center;
+        width: 2.1em;
+    }
+}
+
+.hobbies {
+    @extend %list;
+
+    li {
+        margin-bottom: 10px;
+        width: 50%;
+    }
+
+    i {
+        background: #a6d3f2;
+        color: $color-text-primary;
+        margin-bottom: 5px;
+    }
+}
+
 %list {
     list-style: none;
     margin: 0;
@@ -282,13 +330,6 @@ footer, footer a {
 
     i {
         background: $color-primary;
-        border-radius: 50%;
-        display: block;
-        font-size: 2.1em;
-        line-height: 2.1em;
-        margin: 0 auto 20px;
-        text-align: center;
-        width: 2.1em;
     }
 }
 

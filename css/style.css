@@ -55,11 +55,22 @@ table th {
 table th, td {
   padding: 10px 0; }
 
-table progress {
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #d8d8d8;
+  border: none;
+  color: #0aa6e1;
   height: 12px;
   width: 100%; }
+  progress::-webkit-progress-bar {
+    background: #d8d8d8; }
+  progress::-webkit-progress-value {
+    background: #0aa6e1; }
+  progress::-moz-progress-bar {
+    background: #0aa6e1; }
 
-.container:after, .navbar ul:after, .social-links:after, .bottom-footer:after {
+.container:after, .hobbies:after, .navbar ul:after, .social-links:after, .bottom-footer:after {
   clear: both;
   content: "";
   display: table; }
@@ -99,7 +110,7 @@ table progress {
     z-index: 1; }
 
 .divided section, .divided tr {
-  border-bottom: 2px solid #e0e0e0; }
+  border-bottom: 2px solid #d8d8d8; }
 
 .offset-left {
   padding-left: 10%; }
@@ -134,11 +145,31 @@ table progress {
       top: -8px;
       width: 15px; }
 
-.navbar ul, .social-links {
+.year {
+  float: right; }
+
+.rounded-icons i {
+  border-radius: 50%;
+  display: block;
+  font-size: 2.1em;
+  line-height: 2.1em;
+  margin: 0 auto 20px;
+  text-align: center;
+  width: 2.1em; }
+
+.hobbies li {
+  margin-bottom: 10px;
+  width: 50%; }
+.hobbies i {
+  background: #a6d3f2;
+  color: #fff;
+  margin-bottom: 5px; }
+
+.hobbies, .navbar ul, .social-links {
   list-style: none;
   margin: 0;
   text-align: center; }
-  .navbar ul li, .social-links li {
+  .hobbies li, .navbar ul li, .social-links li {
     float: left; }
 
 /**********************************
@@ -190,14 +221,7 @@ footer, footer a {
 .social-links li {
   width: 33.333%; }
 .social-links i {
-  background: #028cd5;
-  border-radius: 50%;
-  display: block;
-  font-size: 2.1em;
-  line-height: 2.1em;
-  margin: 0 auto 20px;
-  text-align: center;
-  width: 2.1em; }
+  background: #028cd5; }
 
 .bottom-footer {
   background: #028cd5;
