@@ -8,6 +8,9 @@ body {
   font-weight: 400;
   margin: 0; }
 
+main {
+  padding-bottom: 60px; }
+
 p {
   line-height: 1.5; }
 
@@ -36,6 +39,21 @@ a:hover span {
 ul {
   padding-left: 0; }
 
+table {
+  border-collapse: collapse;
+  width: 100%; }
+
+table th {
+  text-align: left;
+  width: 45%; }
+
+table th, td {
+  padding: 10px 0; }
+
+table progress {
+  height: 12px;
+  width: 100%; }
+
 .container:after, .navbar ul:after, .social-links:after, .bottom-footer:after {
   clear: both;
   content: "";
@@ -53,30 +71,41 @@ ul {
 .col {
   box-sizing: border-box;
   float: left;
-  padding: 30px 5%;
+  padding: 30px 50px;
   position: relative;
   /* make all columns equal height.
   https://css-tricks.com/fluid-width-equal-height-columns/ */
   margin-bottom: -99999px;
   padding-bottom: 99999px; }
+  .col section {
+    padding-bottom: 20px; }
+    .col section p {
+      margin: 0; }
   .col-small {
     background: #fff;
     box-shadow: 5px 0 10px -1px #999;
     width: 35%;
     z-index: 2; }
+    .col-small p {
+      margin: 0; }
   .col-large {
     background: #eee;
     width: 65%;
     z-index: 1; }
 
-.col section {
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 10px; }
+.divided section, .divided tr {
+  border-bottom: 2px solid #e0e0e0; }
 
 .offset-left {
   padding-left: 10%; }
 .offset-right {
   padding-right: 10%; }
+
+.description {
+  background: #576268;
+  color: #fff;
+  padding-top: 30px;
+  padding-bottom: 15px; }
 
 .navbar ul, .social-links {
   list-style: none;
@@ -107,7 +136,7 @@ ul {
     Header
 ***********************************/
 header {
-  box-shadow: 0 10px 12px 0 #c0c0c0;
+  box-shadow: 0 10px 12px 2px rgba(0, 0, 0, 0.5);
   color: #fff;
   background: #0aa6e1;
   padding: 30px 0;

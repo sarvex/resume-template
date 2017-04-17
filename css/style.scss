@@ -14,6 +14,10 @@ body {
     margin: 0;
 }
 
+main {
+    padding-bottom: 60px;
+}
+
 p {
     line-height: 1.5;
 }
@@ -54,6 +58,25 @@ ul {
     padding-left: 0;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th {
+    text-align: left;
+    width: 45%;
+}
+
+table th, td {
+    padding: 10px 0;
+}
+
+table progress {
+    height: 12px;
+    width: 100%;
+}
+
 %clearfix {
     &:after {
         clear: both;
@@ -78,18 +101,30 @@ ul {
 .col {
     box-sizing: border-box;
     float: left;
-    padding: 30px 5%;
+    padding: 30px 50px;
     position: relative;
     /* make all columns equal height.
     https://css-tricks.com/fluid-width-equal-height-columns/ */
     margin-bottom: -99999px;
     padding-bottom: 99999px;
 
+    section {
+        padding-bottom: 20px;
+
+        p {
+            margin: 0;
+        }
+    }
+
     &-small {
         background: $white;
         box-shadow: 5px 0 10px -1px #999;
         width: 35%;
         z-index: 2;
+
+        p {
+            margin: 0;
+        }
     }
 
     &-large {
@@ -99,10 +134,10 @@ ul {
     }
 }
 
-// TEMPORARY - will refactor
-.col section {
-    border-bottom: 2px solid $color-divider;
-    padding-bottom: 10px;
+.divided {
+    section, tr {
+        border-bottom: 2px solid $color-divider;
+    }
 }
 
 .offset {
@@ -113,6 +148,13 @@ ul {
     &-right {
         padding-right: 10%;
     }
+}
+
+.description {
+    background: $color-secondary;
+    color: $color-text-primary;
+    padding-top: 30px;
+    padding-bottom: 15px;
 }
 
 %list {
@@ -164,7 +206,7 @@ ul {
 ***********************************/
 
 header {
-    box-shadow: 0 10px 12px 0 #c0c0c0;
+    box-shadow: 0 10px 12px 2px rgba(0, 0, 0, 0.5);
     color: $color-text-primary;
     background: $color-primary-light;
     padding: 30px 0;
