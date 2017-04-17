@@ -12,3 +12,7 @@ $color-secondary-light: $light-gray;
 $color-text-primary: $white;
 $color-text-secondary: $sky-blue;
 $color-divider: #e0e0e0;
+
+$dotted-list-dot-size: 15px;
+$dotted-list-dot-border: 8px;
+$dotted-list-offset: ($dotted-list-dot-size / 2) + $dotted-list-dot-border;

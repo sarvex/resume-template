@@ -46,6 +46,12 @@ h3, h4 {
     }
 }
 
+h5 {
+    font-size: 1em;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
 a, abbr[title] {
     text-decoration: none;
 }
@@ -155,6 +161,37 @@ table progress {
     color: $color-text-primary;
     padding-top: 30px;
     padding-bottom: 15px;
+}
+
+.dotted-list {
+    border-left: 1px solid $color-primary;
+    margin-left: $dotted-list-dot-size;
+    margin-top: ($dotted-list-offset * 2) + $dotted-list-dot-border;
+    padding-left: 40px;
+    position: relative;
+    top: -$dotted-list-dot-border;
+
+    .dotted-list-item {
+        margin-bottom: 20px;
+        position: relative;
+
+        &:before {
+            background: $color-primary;
+            background-clip: content-box;
+            border: $dotted-list-dot-border solid
+                rgba(red($color-primary-light),
+                     green($color-primary-light),
+                     blue($color-primary-light),
+                     0.4);
+            border-radius: 50%;
+            content: "";
+            height: $dotted-list-dot-size;
+            left: -(40px + $dotted-list-offset);
+            position: absolute;
+            top: -$dotted-list-dot-border;
+            width: $dotted-list-dot-size;
+        }
+    }
 }
 
 %list {
