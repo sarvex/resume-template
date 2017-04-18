@@ -61,7 +61,7 @@ table progress {
   background: #d8d8d8;
   border: none;
   color: #028cd5;
-  height: 12px;
+  height: 10px;
   width: 100%; }
   table progress::-webkit-progress-bar {
     background: #d8d8d8; }
@@ -70,7 +70,7 @@ table progress {
   table progress::-moz-progress-bar {
     background: #028cd5; }
 
-.container:after, .hobbies:after, .navbar ul:after, .social-links:after, .bottom-footer:after {
+.container:after, .radial-bar-list:after, .hobbies:after, .navbar ul:after, .social-links:after, .bottom-footer:after {
   clear: both;
   content: "";
   display: table; }
@@ -107,6 +107,8 @@ table progress {
 
 .divided section, .divided tr {
   border-bottom: 2px solid #d8d8d8; }
+.divided th, .divided td {
+  padding: 15px 0; }
 
 .offset-left {
   padding-left: 10%; }
@@ -116,6 +118,7 @@ table progress {
 .description {
   background: #576268;
   color: #fff;
+  font-size: 1.1em;
   padding-top: 30px;
   padding-bottom: 15px; }
 
@@ -140,6 +143,46 @@ table progress {
       position: absolute;
       top: -8px;
       width: 15px; }
+
+.radial-bar-list .radial-bar {
+  background: #028cd5;
+  border-radius: 50%;
+  font-size: 14px;
+  height: 125px;
+  margin-right: 10px;
+  position: relative;
+  width: 125px; }
+  .radial-bar-list .radial-bar .overlay {
+    background: #eee;
+    border-radius: 50%;
+    height: 105px;
+    left: 10px;
+    line-height: 105px;
+    position: absolute;
+    top: 10px;
+    width: 105px; }
+.radial-bar-list .p-0 {
+  background-image: linear-gradient(-90deg, #d8d8d8 50%, transparent 50%, transparent), linear-gradient(-90deg, #028cd5 50%, #d8d8d8 50%, #d8d8d8); }
+.radial-bar-list .p-10 {
+  background-image: linear-gradient(-90deg, #d8d8d8 50%, transparent 50%, transparent), linear-gradient(-126deg, #028cd5 50%, #d8d8d8 50%, #d8d8d8); }
+.radial-bar-list .p-20 {
+  background-image: linear-gradient(-90deg, #d8d8d8 50%, transparent 50%, transparent), linear-gradient(-162deg, #028cd5 50%, #d8d8d8 50%, #d8d8d8); }
+.radial-bar-list .p-30 {
+  background-image: linear-gradient(-90deg, #d8d8d8 50%, transparent 50%, transparent), linear-gradient(-198deg, #028cd5 50%, #d8d8d8 50%, #d8d8d8); }
+.radial-bar-list .p-40 {
+  background-image: linear-gradient(-90deg, #d8d8d8 50%, transparent 50%, transparent), linear-gradient(-234deg, #028cd5 50%, #d8d8d8 50%, #d8d8d8); }
+.radial-bar-list .p-50 {
+  background-image: linear-gradient(90deg, #028cd5 50%, transparent 50%, transparent), linear-gradient(-270deg, #028cd5 50%, #d8d8d8 50%, #d8d8d8); }
+.radial-bar-list .p-60 {
+  background-image: linear-gradient(54deg, #028cd5 50%, transparent 50%, transparent), linear-gradient(-270deg, #028cd5 50%, #d8d8d8 50%, #d8d8d8); }
+.radial-bar-list .p-70 {
+  background-image: linear-gradient(18deg, #028cd5 50%, transparent 50%, transparent), linear-gradient(-270deg, #028cd5 50%, #d8d8d8 50%, #d8d8d8); }
+.radial-bar-list .p-80 {
+  background-image: linear-gradient(-18deg, #028cd5 50%, transparent 50%, transparent), linear-gradient(-270deg, #028cd5 50%, #d8d8d8 50%, #d8d8d8); }
+.radial-bar-list .p-90 {
+  background-image: linear-gradient(-54deg, #028cd5 50%, transparent 50%, transparent), linear-gradient(-270deg, #028cd5 50%, #d8d8d8 50%, #d8d8d8); }
+.radial-bar-list .p-100 {
+  background-image: linear-gradient(-90deg, #028cd5 50%, transparent 50%, transparent), linear-gradient(-270deg, #028cd5 50%, #d8d8d8 50%, #d8d8d8); }
 
 .year {
   float: right; }
@@ -174,11 +217,11 @@ table progress {
 .project-link {
   color: #028cd5; }
 
-.hobbies, .navbar ul, .social-links {
+.radial-bar-list, .hobbies, .navbar ul, .social-links {
   list-style: none;
   margin: 0;
   text-align: center; }
-  .hobbies li, .navbar ul li, .social-links li {
+  .radial-bar-list li, .hobbies li, .navbar ul li, .social-links li {
     float: left; }
 
 /**********************************

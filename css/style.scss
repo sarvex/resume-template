@@ -84,7 +84,7 @@ table progress {
     background: $color-divider;
     border: none;
     color: $color-primary;
-    height: 12px;
+    height: 10px;
     width: 100%;
 
     &::-webkit-progress-bar {
@@ -153,6 +153,10 @@ table progress {
     section, tr {
         border-bottom: 2px solid $color-divider;
     }
+
+    th, td {
+        padding: 15px 0;
+    }
 }
 
 .offset {
@@ -168,6 +172,7 @@ table progress {
 .description {
     background: $color-secondary;
     color: $color-text-primary;
+    font-size: 1.1em;
     padding-top: 30px;
     padding-bottom: 15px;
 }
@@ -199,6 +204,52 @@ table progress {
             position: absolute;
             top: -$dotted-list-dot-border;
             width: $dotted-list-dot-size;
+        }
+    }
+}
+
+// http://codepen.io/geedmo/pen/InFfd
+.radial-bar-list {
+    @extend %list;
+
+    .radial-bar {
+        background: $color-primary;
+        border-radius: 50%;
+        font-size: 14px;
+        height: $radial-bar-size;
+        margin-right: $radial-bar-width;
+        position: relative;
+        width: $radial-bar-size;
+
+        .overlay {
+            background: $color-secondary-light;
+            border-radius: 50%;
+            height: $radial-bar-size - ($radial-bar-width * 2);
+            left: $radial-bar-width;
+            line-height: $radial-bar-size - ($radial-bar-width * 2);
+            position: absolute;
+            top: $radial-bar-width;
+            width: $radial-bar-size - ($radial-bar-width * 2);
+        }
+    }
+
+    $step: 10;
+    $loops: round(100 / $step);
+    $increment: 360 / $loops;
+    $half: round($loops / 2);
+
+    @for $i from 0 through $loops {
+        .p-#{$i * $step} {
+            @if $i < $half {
+                $nextdeg: -(90deg + ($increment * $i));
+                background-image: linear-gradient(-90deg, $color-divider 50%, transparent 50%, transparent),
+                    linear-gradient($nextdeg, $color-primary 50%, $color-divider 50%, $color-divider);
+            }
+            @else {
+                $nextdeg: -(-90deg + ($increment * ($i - $half)));
+                background-image: linear-gradient($nextdeg, $color-primary 50%, transparent 50%, transparent),
+                    linear-gradient(-270deg, $color-primary 50%, $color-divider 50%, $color-divider);
+            }
         }
     }
 }
