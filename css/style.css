@@ -149,6 +149,7 @@ table progress {
   border-radius: 50%;
   font-size: 14px;
   height: 125px;
+  margin-bottom: 10px;
   margin-right: 10px;
   position: relative;
   width: 125px; }
@@ -281,6 +282,64 @@ footer, footer a {
   .bottom-footer address {
     display: inline; }
   .bottom-footer a {
+    display: inline-block;
     float: right; }
+
+/**********************************
+    Media Queries
+***********************************/
+@media only screen and (max-width: 1200px) {
+  .col-small, .col-large {
+    width: 50%; }
+
+  .portfolio-img img {
+    padding: 60px 0; }
+
+  .bottom-footer {
+    text-align: center; }
+    .bottom-footer a {
+      display: block;
+      float: none;
+      margin-top: 10px; } }
+@media only screen and (max-width: 992px) {
+  main {
+    padding-bottom: 0; }
+
+  .col-small, .col-large {
+    margin-bottom: 0;
+    padding-bottom: 60px;
+    width: 100%; }
+
+  .col-small {
+    padding-right: 10%; }
+
+  .col-large {
+    padding-left: 10%; }
+
+  .social-links a span {
+    display: none; }
+  .social-links a i {
+    margin-bottom: 0; }
+
+  .bottom-footer address {
+    display: block; } }
+@media only screen and (min-width: 992px) and (max-width: 1200px), (max-width: 768px) {
+  .year {
+    display: block;
+    float: none;
+    margin-top: 10px; } }
+@media only screen and (max-width: 480px) {
+  h1, h2, h3 {
+    text-align: center; }
+
+  header img {
+    display: block;
+    float: none;
+    margin: 0 auto; }
+
+  .radial-bar-list {
+    display: block;
+    margin: 0 auto;
+    width: 125px; } }
 
 /*# sourceMappingURL=style.css.map */
