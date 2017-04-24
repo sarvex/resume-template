@@ -1,6 +1,6 @@
 @import url(normalize.css);
 /**********************************
-    Layout & Typography
+    Base Styles
 ***********************************/
 body {
   font-size: 16px;
@@ -11,6 +11,18 @@ body {
 main {
   padding-bottom: 60px; }
 
+ul {
+  padding-left: 0; }
+
+a, abbr[title] {
+  text-decoration: none; }
+
+a:hover span {
+  text-decoration: underline; }
+
+/**********************************
+    Typography
+***********************************/
 p {
   line-height: 1.5; }
 
@@ -35,41 +47,9 @@ h5 {
   margin-bottom: 10px;
   margin-top: 0; }
 
-a, abbr[title] {
-  text-decoration: none; }
-
-a:hover span {
-  text-decoration: underline; }
-
-ul {
-  padding-left: 0; }
-
-table {
-  border-collapse: collapse;
-  width: 100%; }
-
-table th {
-  text-align: left;
-  width: 45%; }
-
-table th, td {
-  padding: 10px 0; }
-
-table progress {
-  -webkit-appearance: none;
-  appearance: none;
-  background: #d8d8d8;
-  border: none;
-  color: #028cd5;
-  height: 10px;
-  width: 100%; }
-  table progress::-webkit-progress-bar {
-    background: #d8d8d8; }
-  table progress::-webkit-progress-value {
-    background: #028cd5; }
-  table progress::-moz-progress-bar {
-    background: #028cd5; }
-
+/**********************************
+    Layout
+***********************************/
 .container:after, .radial-bar-list:after, .hobbies:after, .navbar ul:after, .social-links:after, .bottom-footer:after {
   clear: both;
   content: "";
@@ -105,15 +85,70 @@ table progress {
     width: 65%;
     z-index: 1; }
 
-.divided section, .divided tr {
-  border-bottom: 2px solid #d8d8d8; }
-.divided th, .divided td {
-  padding: 15px 0; }
-
 .offset-left {
   padding-left: 10%; }
 .offset-right {
   padding-right: 10%; }
+
+.year {
+  float: right; }
+
+.no-padding {
+  padding: 0; }
+
+.portfolio section:nth-of-type(2n) .col-small {
+  float: right; }
+
+.portfolio-img {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0; }
+  .portfolio-img img {
+    width: 100%; }
+
+/**********************************
+    Tables
+***********************************/
+table {
+  border-collapse: collapse;
+  width: 100%; }
+
+table th {
+  text-align: left;
+  width: 45%; }
+
+table th, td {
+  padding: 10px 0; }
+
+table progress {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #d8d8d8;
+  border: none;
+  color: #028cd5;
+  height: 10px;
+  width: 100%; }
+  table progress::-webkit-progress-bar {
+    background: #d8d8d8; }
+  table progress::-webkit-progress-value {
+    background: #028cd5; }
+  table progress::-moz-progress-bar {
+    background: #028cd5; }
+
+/**********************************
+    Components
+***********************************/
+.radial-bar-list, .hobbies, .navbar ul, .social-links {
+  list-style: none;
+  margin: 0;
+  text-align: center; }
+  .radial-bar-list li, .hobbies li, .navbar ul li, .social-links li {
+    float: left; }
+
+.divided section, .divided tr {
+  border-bottom: 2px solid #d8d8d8; }
+.divided th, .divided td {
+  padding: 15px 0; }
 
 .description {
   background: #576268;
@@ -185,9 +220,6 @@ table progress {
 .radial-bar-list .p-100 {
   background-image: linear-gradient(-90deg, #028cd5 50%, transparent 50%, transparent), linear-gradient(-270deg, #028cd5 50%, #d8d8d8 50%, #d8d8d8); }
 
-.year {
-  float: right; }
-
 .rounded-icons i {
   border-radius: 50%;
   display: block;
@@ -205,25 +237,8 @@ table progress {
   color: #fff;
   margin-bottom: 5px; }
 
-.no-padding {
-  padding: 0; }
-
-.portfolio-img {
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0; }
-  .portfolio-img img {
-    width: 100%; }
-
 .project-link {
   color: #028cd5; }
-
-.radial-bar-list, .hobbies, .navbar ul, .social-links {
-  list-style: none;
-  margin: 0;
-  text-align: center; }
-  .radial-bar-list li, .hobbies li, .navbar ul li, .social-links li {
-    float: left; }
 
 /**********************************
     Navigation bar
@@ -255,11 +270,9 @@ header {
   z-index: 100; }
 
 header img {
+  border-radius: 50%;
   float: right;
   width: 150px; }
-
-.rounded {
-  border-radius: 50%; }
 
 /**********************************
     Footer
@@ -315,6 +328,16 @@ footer, footer a {
 
   .col-large {
     padding-left: 10%; }
+
+  .portfolio section:nth-of-type(2n) .col-small {
+    float: left;
+    padding-left: 10%; }
+
+  .portfolio-img {
+    padding: 0; }
+    .portfolio-img img {
+      padding: 0;
+      width: 100%; }
 
   .social-links a span {
     display: none; }

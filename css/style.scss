@@ -2,7 +2,7 @@
 @import "variables";
 
 /**********************************
-    Layout & Typography
+    Base Styles
 ***********************************/
 
 body {
@@ -17,6 +17,22 @@ body {
 main {
     padding-bottom: 60px;
 }
+
+ul {
+    padding-left: 0;
+}
+
+a, abbr[title] {
+    text-decoration: none;
+}
+
+a:hover span {
+    text-decoration: underline;
+}
+
+/**********************************
+    Typography
+***********************************/
 
 p {
     line-height: 1.5;
@@ -52,53 +68,9 @@ h5 {
     margin-top: 0;
 }
 
-a, abbr[title] {
-    text-decoration: none;
-}
-
-a:hover span {
-    text-decoration: underline;
-}
-
-ul {
-    padding-left: 0;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-table th {
-    text-align: left;
-    width: 45%;
-}
-
-table th, td {
-    padding: 10px 0;
-}
-
-table progress {
-    -webkit-appearance: none;
-            appearance: none;
-    background: $color-divider;
-    border: none;
-    color: $color-primary;
-    height: 10px;
-    width: 100%;
-
-    &::-webkit-progress-bar {
-        background: $color-divider;
-    }
-
-    &::-webkit-progress-value {
-        background: $color-primary;
-    }
-
-    &::-moz-progress-bar {
-        background: $color-primary;
-    }
-}
+/**********************************
+    Layout
+***********************************/
 
 %clearfix {
     &:after {
@@ -149,16 +121,6 @@ table progress {
     }
 }
 
-.divided {
-    section, tr {
-        border-bottom: 2px solid $color-divider;
-    }
-
-    th, td {
-        padding: 15px 0;
-    }
-}
-
 .offset {
     &-left {
         padding-left: 10%;
@@ -166,6 +128,94 @@ table progress {
 
     &-right {
         padding-right: 10%;
+    }
+}
+
+.year {
+    float: right;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.portfolio section:nth-of-type(2n) .col-small {
+    float: right;
+}
+
+.portfolio-img {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+
+    img {
+        width: 100%;
+    }
+}
+
+/**********************************
+    Tables
+***********************************/
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th {
+    text-align: left;
+    width: 45%;
+}
+
+table th, td {
+    padding: 10px 0;
+}
+
+table progress {
+    -webkit-appearance: none;
+            appearance: none;
+    background: $color-divider;
+    border: none;
+    color: $color-primary;
+    height: 10px;
+    width: 100%;
+
+    &::-webkit-progress-bar {
+        background: $color-divider;
+    }
+
+    &::-webkit-progress-value {
+        background: $color-primary;
+    }
+
+    &::-moz-progress-bar {
+        background: $color-primary;
+    }
+}
+
+/**********************************
+    Components
+***********************************/
+
+%list {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+
+    li {
+        float: left;
+    }
+
+    @extend %clearfix;
+}
+
+.divided {
+    section, tr {
+        border-bottom: 2px solid $color-divider;
+    }
+
+    th, td {
+        padding: 15px 0;
     }
 }
 
@@ -255,10 +305,6 @@ table progress {
     }
 }
 
-.year {
-    float: right;
-}
-
 .rounded-icons {
     i {
         border-radius: 50%;
@@ -286,34 +332,8 @@ table progress {
     }
 }
 
-.no-padding {
-    padding: 0;
-}
-
-.portfolio-img {
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-
-    img {
-        width: 100%;
-    }
-}
-
 .project-link {
     color: $color-primary;
-}
-
-%list {
-    list-style: none;
-    margin: 0;
-    text-align: center;
-
-    li {
-        float: left;
-    }
-
-    @extend %clearfix;
 }
 
 /**********************************
@@ -362,12 +382,9 @@ header {
 }
 
 header img {
+    border-radius: 50%;
     float: right;
     width: 150px;
-}
-
-.rounded {
-    border-radius: 50%;
 }
 
 /**********************************
@@ -454,6 +471,20 @@ footer, footer a {
 
     .col-large {
         padding-left: 10%;
+    }
+
+    .portfolio section:nth-of-type(2n) .col-small {
+        float: left;
+        padding-left: 10%;
+    }
+
+    .portfolio-img {
+        padding: 0;
+
+        img {
+            padding: 0;
+            width: 100%;
+        }
     }
 
     .social-links a {

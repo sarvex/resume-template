@@ -1,3 +1,4 @@
+// define base colors
 $blue: #028cd5;
 $light-blue: #0aa6e1;
 $gray: #576268;
@@ -5,6 +6,7 @@ $light-gray: #eee;
 $white: #fff;
 $sky-blue: #aad3f3;
 
+// reassign colors to more general variables
 $color-primary: $blue;
 $color-primary-light: $light-blue;
 $color-secondary: $gray;
@@ -13,9 +15,11 @@ $color-text-primary: $white;
 $color-text-secondary: $sky-blue;
 $color-divider: #d8d8d8;
 
+// dimensions specific to custom dotted list
 $dotted-list-dot-size: 15px;
 $dotted-list-dot-border: 8px;
 $dotted-list-offset: ($dotted-list-dot-size / 2) + $dotted-list-dot-border;
 
+// dimensions specific to radial bar
 $radial-bar-size: 125px;
 $radial-bar-width: 10px;
